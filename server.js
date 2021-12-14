@@ -14,6 +14,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+var port = process.env.PORT || 3000;
 
 mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/amazona-simple");
 
